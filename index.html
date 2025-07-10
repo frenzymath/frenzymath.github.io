@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FrenzyMath &mdash; By the mathematicians, for the mathematicians</title>
+    <style>
+      /* --- Simple, responsive layout --- */
+      :root {
+        --accent: #2246c6;
+        --bg: #fdfdfd;
+        --text: #222;
+        --muted: #666;
+        --max-width: 900px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.55;
+      }
+      header {
+        background: var(--accent);
+        color: #fff;
+        padding: 3rem 1rem;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+      header p {
+        font-size: 1.15rem;
+        font-style: italic;
+        opacity: 0.9;
+      }
+      nav {
+        background: #fff;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      nav ul {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        display: flex;
+        list-style: none;
+      }
+      nav li {
+        flex: 1;
+      }
+      nav a {
+        display: block;
+        padding: 0.8rem 0;
+        text-align: center;
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 600;
+      }
+      nav a:hover {
+        color: var(--accent);
+      }
+      main {
+        max-width: var(--max-width);
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      section {
+        margin-bottom: 3rem;
+      }
+      section h2 {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+        color: var(--accent);
+      }
+      /* Researchers grid */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+      }
+      .card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        padding: 1.5rem;
+        text-align: center;
+      }
+      .card img {
+        width: 96px;
+        height: 96px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 0 auto 1rem;
+      }
+      .card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.25rem;
+      }
+      .card p {
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+      /* Publication list */
+      .pub-list {
+        list-style: none;
+      }
+      .pub-item {
+        padding: 0.75rem 0;
+      }
+      .pub-item + .pub-item {
+        border-top: 1px solid #eaeaea;
+      }
+      .pub-title {
+        font-weight: 600;
+      }
+      .pub-meta {
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+      /* Blog/Recent work cards */
+      .post {
+        margin-bottom: 2rem;
+      }
+      .post h3 {
+        margin-bottom: 0.3rem;
+      }
+      .post time {
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+      footer {
+        background: #f3f4f6;
+        text-align: center;
+        padding: 2rem 1rem;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>FrenzyMath</h1>
+      <p>By the mathematicians, for the mathematicians</p>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#researchers">Researchers</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#recent-work">Recent Work</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Researchers Section -->
+      <section id="researchers">
+        <h2>Researchers</h2>
+        <div class="grid">
+          <!-- Example researcher card -->
+          <div class="card">
+            <img src="https://via.placeholder.com/96" alt="Researcher portrait" />
+            <h3>Dr.&nbsp;Ada Lovelace</h3>
+            <p>Algebraic Topology</p>
+            <p><a href="mailto:ada@frenzymath.org">ada@frenzymath.org</a></p>
+          </div>
+          <!-- Repeat for more researchers -->
+        </div>
+      </section>
+
+      <!-- Publications Section -->
+      <section id="publications">
+        <h2>Publications</h2>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <span class="pub-title">On the Formalization of Coxeter Groups</span><br />
+            <span class="pub-meta">A. Lovelace, B. Musician &bullet; Journal of Abstract Algebra, 2025</span>
+            &nbsp;&nbsp;<a href="#">PDF</a>
+          </li>
+          <!-- Add more publications here -->
+        </ul>
+      </section>
+
+      <!-- Recent Work / Blog Section -->
+      <section id="recent-work">
+        <h2>Recent Work</h2>
+        <article class="post">
+          <h3><a href="#">Proof Automation in Lean 4: A Survey</a></h3>
+          <time datetime="2025-07-01">July 1, 2025</time>
+          <p>
+            We explore state‑of‑the‑art automated proof generation inside the Lean 4
+            theorem prover, highlighting our latest contributions and future work.
+          </p>
+        </article>
+        <!-- Add more posts here -->
+      </section>
+    </main>
+
+    <footer>
+      Copyright &copy; <span id="year"></span> FrenzyMath. All rights reserved.
+    </footer>
+
+    <script>
+      // Update footer year automatically
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
